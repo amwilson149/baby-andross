@@ -19,8 +19,7 @@ mip_3_res = [32, 32, 30]
 
 # Import p3 and p7 voxel lists (which were computed separately because they take so long)
 print('Importing voxel lists...')
-# p7_vx_fname = '/usr/people/amw7/pinky_analysis/cerebellum/data/190114_p7_fta_vx_lists.json'
-p7_vx_fname = '/usr/people/amw7/pinky_analysis/cerebellum/data/190306_p7_fta_vx_lists_patched.json'
+p7_vx_fname = './data/190306_p7_fta_vx_lists_patched.json'
 with open(p7_vx_fname,'r') as f:
     p7_vx = json.loads(f.read())
 
@@ -307,12 +306,12 @@ print('Running simulation of P7 data...')
 p7_simdict0 = runsim(p7_vx,p7_xmin,p7_xmax,p7_ymin,p7_ymax,p7_zmin,p7_zmax,p7_alphamin,p7_alphamax,p7_betamin,p7_betamax,p7_gammamin,p7_gammamax,N0,p7_baseline_cc_dict,p7xsize,p7ysize,p7zsize,n_iter)
 print('Saving simulation results...')
 # Save dictionary about number of connected components per terminal arbor
-p7_fta_fname0 = 'data/190307_new_dxdz_const_p7_n_segs_from_ftas_ssize_{0}_{1}_n_iter_{2}.json'.format(N0[0],N0[-1],n_iter)
+p7_fta_fname0 = 'data/sim_br_from_ftas_results/190307_new_dxdz_const_p7_n_segs_from_ftas_ssize_{0}_{1}_n_iter_{2}.json'.format(N0[0],N0[-1],n_iter)
 with open(p7_fta_fname0,'w') as f:
     jsonobj = json.dumps(p7_simdict0)
     f.write(jsonobj)
 # Save dictionary with the baseline numbers of connected components per terminal arbor
-p7_bl_fname = 'data/190307_new_dxdz_const_p7_baseline_n_ccs.json'
+p7_bl_fname = 'data/sim_br_from_ftas_results/190307_new_dxdz_const_p7_baseline_n_ccs.json'
 print('saving p7 baseline connected components...')
 with open(p7_bl_fname, 'w') as f:
     jsonobj = json.dumps(p7_baseline_cc_dict)

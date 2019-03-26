@@ -8,9 +8,9 @@ import json
 
 # Get connectivity matrices
 # p3
-p3cd = scio.loadmat('./181227_analysis_conn-based_ax_cuts/connectivity_matrices/P3_Observed_PC_Connectivity_Synapse_Numbers_gteq_5_syns_gteq_40pc_PC_targets.mat')
+p3cd = scio.loadmat('./data/connectivity_matrices/P3_Observed_PC_Connectivity_Synapse_Numbers_gteq_5_syns_gteq_40pc_PC_targets.mat')
 # p7
-p7cd = scio.loadmat('./181227_analysis_conn-based_ax_cuts/connectivity_matrices/P7_Observed_PC_Connectivity_Synapse_Numbers_gteq_5_syns_gteq_70pc_PC_targets.mat')
+p7cd = scio.loadmat('./data/connectivity_matrices/P7_Observed_PC_Connectivity_Synapse_Numbers_gteq_5_syns_gteq_70pc_PC_targets.mat')
 
 p3c = p3cd['P3_PCconnectivity']
 p7c = p7cd['P7_PCconnectivity']
@@ -396,11 +396,11 @@ for pr in prem:
             ind_trial_results_dict = {'prem':ind_trials_prem,'gamma':ind_trials_gamma,'frac_conv_runs':ind_trials_convergence,'first_conv_ts':ind_trials_first_conv_ts}
             avg_trial_results_dict = {'prem':avg_over_trials_prem,'gamma':avg_over_trials_gamma,'frac_conv_runs':avg_over_trials_conv,'first_conv_ts':avg_over_trials_first_conv_ts}
             # For coarse runs
-#             ind_fname = 'data/190205_evolve_p3_p7_coarse_scan_pr_{0}_{1}_g_{2}_{3}_ind_trial_conv_results.json'.format(prem[0],prem[-1],gamma[0],gamma[-1])
-#             avg_fname = 'data/190205_evolve_p3_p7_coarse_scan_pr_{0}_{1}_g_{2}_{3}_avg_trial_conv_results.json'.format(prem[0],prem[-1],gamma[0],gamma[-1])
+#             ind_fname = 'data/p3_p7_evolve_results/190205_evolve_p3_p7_coarse_scan_pr_{0}_{1}_g_{2}_{3}_ind_trial_conv_results.json'.format(prem[0],prem[-1],gamma[0],gamma[-1])
+#             avg_fname = 'data/p3_p7_evolve_results/190205_evolve_p3_p7_coarse_scan_pr_{0}_{1}_g_{2}_{3}_avg_trial_conv_results.json'.format(prem[0],prem[-1],gamma[0],gamma[-1])
             # For fine runs
-            ind_fname = 'data/190208_evolve_p3_p7_fine_scan_pr_{0}_{1}_g_{2}_{3}_ind_trial_conv_results.json'.format(prem[0],prem[-1],gamma[0],gamma[-1])
-            avg_fname = 'data/190208_evolve_p3_p7_fine_scan_pr_{0}_{1}_g_{2}_{3}_avg_trial_conv_results.json'.format(prem[0],prem[-1],gamma[0],gamma[-1])
+            ind_fname = 'data/p3_p7_evolve_results/190208_evolve_p3_p7_fine_scan_pr_{0}_{1}_g_{2}_{3}_ind_trial_conv_results.json'.format(prem[0],prem[-1],gamma[0],gamma[-1])
+            avg_fname = 'data/p3_p7_evolve_results/190208_evolve_p3_p7_fine_scan_pr_{0}_{1}_g_{2}_{3}_avg_trial_conv_results.json'.format(prem[0],prem[-1],gamma[0],gamma[-1])
             with open(ind_fname,'w') as f:
                 jsonobj = json.dumps(ind_trial_results_dict)
                 f.write(jsonobj)
@@ -420,7 +420,7 @@ for pr in prem:
             err_info_dict['time_step'] = [int(err_ts[q]) for q in range(len(err_ts))]
             err_info_dict['iteration'] = [int(err_iters[q]) for q in range(len(err_iters))]
             # Save dictionary
-            errfname = './data/190211_errs_per_ts_pr_{0}_g_{1}_niter_{2}.json'.format(prem[0],gamma[0],niter)
+            errfname = './data/p3_p7_evolve_results/190211_errs_per_ts_pr_{0}_g_{1}_niter_{2}.json'.format(prem[0],gamma[0],niter)
             with open(errfname,'w') as f:
                 jsonobj = json.dumps(err_info_dict)
                 f.write(jsonobj)
@@ -437,7 +437,7 @@ for pr in prem:
             c_err_info_dict['time_step'] = [int(c_err_ts[q]) for q in range(len(c_err_ts))]
             c_err_info_dict['iteration'] = [int(c_err_iters[q]) for q in range(len(c_err_iters))]
             # Save dictionary
-            cerrfname = './data/190211_errs_per_conv_ts_pr_{0}_g_{1}_niter_{2}.json'.format(prem[0],gamma[0],niter)
+            cerrfname = './data/p3_p7_evolve_results/190211_errs_per_conv_ts_pr_{0}_g_{1}_niter_{2}.json'.format(prem[0],gamma[0],niter)
             with open(cerrfname,'w') as f:
                 jsonobj = json.dumps(c_err_info_dict)
                 f.write(jsonobj)
@@ -449,7 +449,7 @@ for pr in prem:
             n_syns_per_cf_dict['timestep'] = ts_for_cfs_by_ts
             n_syns_per_cf_dict['nsyns_per_ts'] = n_syns_per_cf_by_ts
             # Save dictionary
-            nsyns_fname = 'data/190211_evolve_p3_p7_nsyns_per_cf_per_ts_pr_{0}_g_{1}_niter_{2}.json'.format(prem[0],gamma[0],niter)
+            nsyns_fname = 'data/p3_p7_evolve_results/190211_evolve_p3_p7_nsyns_per_cf_per_ts_pr_{0}_g_{1}_niter_{2}.json'.format(prem[0],gamma[0],niter)
             with open(nsyns_fname,'w') as f:
                 jsonobj = json.dumps(n_syns_per_cf_dict)
                 f.write(jsonobj)
