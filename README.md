@@ -15,5 +15,10 @@ Important: a few data files used for these analyses are compressed, so you have 
 - data/mc_connectivity_experiment/190205_p3_obs_vs_mc_conn_niter_100000.json.gz (results of Monte Carlo simulating random innervation of targets by climbing fiber branches at P3)
 - data/mc_connectivity_experiment/190205_p7_obs_vs_mc_conn_niter_100000.json.gz (results of Monte Carlo simulating random innervation of targets by climbing fiber branches at P7).
 
+## Resources
 The aligned EM image volumes and various manual annotations used for this analysis can be found here:
 https://bossdb.org/project/PREwilson2019
+
+The paper in which these scripts were used is here:
+https://www.biorxiv.org/content/10.1101/627299v1
+
