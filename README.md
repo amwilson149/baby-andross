@@ -14,3 +14,6 @@ Important: a few data files used for these analyses are compressed, so you have 
 - data/cf_voxel_lists/190306_p7_fta_vx_lists_patched.json.gz (voxel lists used to compute how climbing fiber terminal arbors are broken by the edges of the P7 image volume)
 - data/mc_connectivity_experiment/190205_p3_obs_vs_mc_conn_niter_100000.json.gz (results of Monte Carlo simulating random innervation of targets by climbing fiber branches at P3)
 - data/mc_connectivity_experiment/190205_p7_obs_vs_mc_conn_niter_100000.json.gz (results of Monte Carlo simulating random innervation of targets by climbing fiber branches at P7).
+
+The aligned EM image volumes and various manual annotations used for this analysis can be found here:
+https://bossdb.org/project/PREwilson2019
