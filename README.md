@@ -21,7 +21,7 @@ Voxel lists of segments (available from the links in the Resources section) were
 
 ## Resources
 The aligned EM image volumes and manual annotations used for this analysis can be found here:
-https://bossdb.org/project/PREwilson2019
+https://bossdb.org/project/wilson2019
 
 The paper in which these scripts were used is here:
 https://www.biorxiv.org/content/10.1101/627299v1
