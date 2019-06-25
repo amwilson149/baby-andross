@@ -17,7 +17,7 @@ Two other data files that are produced by these scripts are large. If you would 
 - data/mc_connectivity_experiment/190205_p7_obs_vs_mc_conn_niter_100000.json.gz (produced by 190205_get_p7_syn_info_from_mat_file_axon_cuts.ipynb)
 
 ## Using voxel lists
-Voxel lists of segments (available from the links in the Resources section) were produced from [fill in how they were gotten once you confirm]. In some cases, missing sections or other imperfections in the annotations themselves caused the voxel list to be disconnected. To correct this problem and "patch" these holes, we applied a downsampling strategy (i.e. we downsampled until each segment was a single connected component). See [upload the code to the repository.] The voxel lists available in data/cf_voxel_lists/190306_p7_fta_vx_lists_patched.json.gz have already been patched. Any voxel lists you produce will need to be patched before being used.
+Voxel lists of segments were produced by querying meshes produced in CloudVolume. In some cases, missing sections or other imperfections in the annotations caused the voxel list for a single segment to be disconnected. To correct this problem and "patch" these holes, we convolved the voxel list with a 3-dimensional cubic kernel, starting with a kernel of side length 3 (i.e. 3 x 3 x 3 pixels), checking whether the resulting voxel list was a single connected component, and if not, increasing the side length of the kernel by 1 pixel and repeating the convolution until the segment became a single connected component. You can find both the method used to retrieve the voxel lists and the function used to patch the voxel lists in the script 190114_generate_p3_p7_fta_vox_lists.py. Note: the voxel lists available in data/cf_voxel_lists/190306_p7_fta_vx_lists_patched.json.gz have already been patched. Any new voxel lists you produce from the annotations in these datasets will need to be patched before being used.
 
 ## Resources
 The aligned EM image volumes and manual annotations used for this analysis can be found here:
@@ -25,4 +25,7 @@ https://bossdb.org/project/wilson2019
 
 The paper in which these scripts were used is here:
 https://www.biorxiv.org/content/10.1101/627299v1
+
+The raw connectivity data (that is, axon branch IDs, synapse IDs, cell IDs, and synapse metadata) can be found here:
+[insert Mendeley data link when published]
 
