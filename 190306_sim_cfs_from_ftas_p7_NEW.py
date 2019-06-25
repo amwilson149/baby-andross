@@ -4,8 +4,7 @@ import scipy.ndimage.measurements as spim
 import skimage.measure as skim
 import json
 
-# List of cfs with full terminal arbors (gotten from
-# 'G:\P3_and_P7_Analysis_Scripts_Backup_MATLAB\181227_analysis_conn-based_ax_cuts\p3_p7_print_cf_fta_ids.m')
+# List of cfs with full terminal arbors
 p7_ftas = [7,11,12,22,24,54,55,61,63] # p7
 
 # all cf ids from p7 analysis for reference
