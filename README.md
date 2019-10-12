@@ -27,5 +27,5 @@ The paper in which these scripts were used is here:
 https://www.biorxiv.org/content/10.1101/627299v1
 
 The raw connectivity data (that is, axon branch IDs, synapse IDs, cell IDs, and synapse metadata) can be found here:
-[insert Mendeley data link when published]
+http://dx.doi.org/10.17632/jsjny43yzz.1
 
