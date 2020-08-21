@@ -24,7 +24,7 @@ The aligned EM image volumes and manual annotations used for this analysis can b
 https://bossdb.org/project/wilson2019
 
 The paper in which these scripts were used is here:
-https://www.biorxiv.org/content/10.1101/627299v1
+https://doi.org/10.1016/j.celrep.2019.10.081
 
 The raw connectivity data (that is, axon branch IDs, synapse IDs, cell IDs, and synapse metadata) can be found here:
 http://dx.doi.org/10.17632/jsjny43yzz.1
