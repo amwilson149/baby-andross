@@ -6,7 +6,7 @@ beautifulsoup4==4.4.1
 chardet==2.3.0
 configobj==5.0.6
 crcmod==1.7
-cvxopt==1.1.4
+cvxopt==1.2.7
 cycler==0.9.0
 decorator==4.0.6
 docutils==0.12
