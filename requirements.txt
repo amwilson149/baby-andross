@@ -55,7 +55,7 @@ statsmodels==0.6.1
 tables==3.2.2
 unity-lens-photos==1.0
 virtualenv==15.1.0
-VTK==5.10.1
+VTK==9.0.1
 wrapt==1.8.0
 xlrd==0.9.4
 xlwt==0.7.5
